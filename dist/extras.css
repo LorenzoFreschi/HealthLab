@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  /*    font-family: 'Raleway', sans-serif; */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+#toggle-menu {
+  transition: height 0.4s;
+}
+#toggle-btn:checked ~ #toggle-menu {
+  height: 11rem;
+}
