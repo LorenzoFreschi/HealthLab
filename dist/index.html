@@ -13,16 +13,17 @@
 		/>
 		<link rel="stylesheet" href="output.css" />
 		<link rel="stylesheet" href="extras.css" />
+		<link rel="stylesheet" href="media.css" />
 	</head>
 	<body>
 		<header
 			id="home"
 			class="relative h-screen bg-center bg-no-repeat bg-cover"
-			style="background-image: url(img/cover.jpg);"
+			style="background-image: url(img/cover-2.jpg);"
 		>
 			<nav
 				id="navbar"
-				class="fixed w-screen text-white bg-teal-400 md:flex md:justify-between xl:px-8"
+				class="fixed w-screen text-white bg-primary md:flex md:justify-between xl:px-8 text-secondary"
 			>
 				<div
 					class="z-10 flex flex-row items-center justify-between px-6 py-4 sm:flex-row"
@@ -58,41 +59,41 @@
 				>
 					<ul
 						id="menu-list"
-						class="mb-3 md:flex md:items-center md:mb-0"
+						class="mb-3 md:flex md:items-center md:mb-0 md:px-2 md:mr-4 lg:mr-0"
 					>
 						<li
-							class="px-6 py-2 md:px-2 lg:py-4 hover:bg-teal-500 md:hover:bg-teal-400"
+							class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
 						>
 							<a
 								href="#home"
-								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-2 sm:px-1 md:hover:border-white"
+								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-2 sm:px-1 md:hover:border-teal-400"
 								>Home</a
 							>
 						</li>
 						<li
-							class="px-6 py-2 md:px-2 lg:py-4 hover:bg-teal-500 md:hover:bg-teal-400"
+							class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue- md:hover:bg-transparent"
 						>
 							<a
 								href=""
-								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-white"
+								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-teal-400"
 								>Chi Siamo</a
 							>
 						</li>
 						<li
-							class="px-6 py-2 md:px-2 lg:py-4 hover:bg-teal-500 md:hover:bg-teal-400"
+							class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
 						>
 							<a
 								href="#osteopatia"
-								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-white"
+								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-teal-400"
 								>Osteopatia</a
 							>
 						</li>
 						<li
-							class="px-6 py-2 md:px-2 lg:py-4 hover:bg-teal-500 md:hover:bg-teal-400"
+							class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
 						>
 							<a
 								href="#contatti"
-								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-white"
+								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-teal-400"
 								>Contattaci</a
 							>
 						</li>
@@ -102,18 +103,36 @@
 			<div
 				class="flex flex-col items-center justify-center h-full py-0 py-4 text-center"
 			>
-				<h1 class="max-w-screen-sm mx-4 my-3 text-4xl m">
-					Lorem ipsum dolor sit amet.
-				</h1>
-				<p class="max-w-screen-sm mx-4 my-3 text-lg m">
-					Lorem ipsum dolor sit, amet consectetur adipisicing
-					elit. Cupiditate, et.
-				</p>
-				<a
-					href=""
-					class="px-4 py-3 text-white bg-teal-400 rounded-md"
-					><i class="fas fa-chevron-right"></i>Info</a
-				>
+				<div class="flex-col p-4 md:p-10 lg:p-20">
+					<h1
+						class="max-w-screen-sm mx-4 my-3 text-4xl text-primary"
+						id="titolo"
+					>
+						HealthLab
+					</h1>
+					<p
+						class="max-w-screen-sm mx-4 my-3 text-xl font-semibold text-gray-300"
+					>
+						Il tuo studio osteopatico di fiducia
+					</p>
+					<div class="flex justify-center">
+						<a
+							href=""
+							class="px-4 py-3 m-2 bg-orange-400 border-blue-600 rounded-md text-primary"
+						>
+							<!-- <i class="fas fa-chevron-right"></i>Info -->
+							CHI SAMO
+						</a>
+
+						<a
+							href="#contatti"
+							class="px-4 py-3 m-2 border-blue-600 rounded-md text-secondary bg-primary"
+						>
+							<!-- <i class="fas fa-chevron-right"></i>Info -->
+							CONTATTACI
+						</a>
+					</div>
+				</div>
 			</div>
 		</header>
 
@@ -123,9 +142,11 @@
 			>
 				<div class="mt-4 text-center">
 					<i
-						class="p-5 text-white bg-teal-400 rounded-full fas fa-heart"
+						class="p-5 text-white rounded-full bg-primary fas fa-heart text-secondary"
 					></i>
-					<h4 class="text-2xl font-hairline uppercase">
+					<h4
+						class="text-2xl font-hairline uppercase text-primary"
+					>
 						Passione
 					</h4>
 					<p class="px-6 py-2 text-center">
@@ -137,9 +158,13 @@
 				</div>
 				<div class="mt-4 text-center">
 					<i
-						class="p-5 text-white bg-teal-400 rounded-full fas fa-hand-holding-heart"
+						class="p-5 text-white rounded-full bg-primary fas fa-hand-holding-heart text-secondary"
 					></i>
-					<h4 class="text-2xl font-hairline uppercase">Cura</h4>
+					<h4
+						class="text-2xl font-hairline uppercase text-primary"
+					>
+						Cura
+					</h4>
 					<p class="px-6 py-2 text-center">
 						Lorem ipsum dolor sit amet consectetur adipisicing
 						elit. Exercitationem nihil, incidunt commodi
@@ -149,9 +174,11 @@
 				</div>
 				<div class="mt-4 text-center">
 					<i
-						class="p-5 text-white bg-teal-400 rounded-full fas fa-spa"
+						class="p-5 text-white rounded-full bg-primary fas fa-spa text-secondary"
 					></i>
-					<h4 class="text-2xl font-hairline uppercase">
+					<h4
+						class="text-2xl font-hairline uppercase text-primary"
+					>
 						Benessere
 					</h4>
 					<p class="px-6 py-2 text-center">
@@ -166,15 +193,19 @@
 
 		<section class="mt-12" id="osteopatia">
 			<div class="container">
-				<h4 class="text-3xl uppercase xl:text-4xl">
-					Che cos'è l'osteopatia?
+				<h4 class="text-3xl uppercase xl:text-4xl text-secondary">
+					<span class="text-primary">Che cos'è</span>
+					l'osteopatia?
 				</h4>
 				<div class="lg:flex lg:flex-row-reverse">
 					<div class="mt-2 lg:w-1/2 lg:ml-4">
 						<p class="pt-2 text-justify lg:mr-4 lg:pt-3">
-							L'osteopatia é una medicina manuale nata
-							negli Stati Uniti ad opera del
-							<span class="font-bold"
+							L'osteopatia é una
+							<span class="text-primary"
+								>medicina manuale</span
+							>
+							nata negli Stati Uniti ad opera del
+							<span class="font-semibold"
 								>Dott. A. Taylor Still</span
 							>
 							nel 1874. Fondata su una conoscenza precisa
@@ -230,9 +261,7 @@
 						class="mt-12 mb-3 text-2xl uppercase xl:text-3xl xl:font-normal"
 					>
 						Still fondò l’osteopatia su
-						<span class="text-teal-400"
-							>tre principi fondamentali:</span
-						>
+						<span class="">tre principi fondamentali:</span>
 					</h5>
 					<ul class="lg:flex lg:flex-row lg:h-auto">
 						<div
@@ -253,7 +282,7 @@
 								id="cnt-uno"
 							>
 								<p class="px-3 pt-2 mt-0">
-									Il paziente è vistoi nella sua
+									Il paziente è visto nella sua
 									globalità, in maniera “olistica”.
 								</p>
 								<p class="px-3 mt-2 lg:pb-6">
@@ -274,7 +303,7 @@
 							class="border p2 lg:flex lg:flex-col lg:w-1/3"
 						>
 							<li
-								class="px-3 py-4 bcursor-pointer bg-grey-100 hover:bg-gray-100 lg:bg-gray-100"
+								class="px-3 py-4 bg-gray-100 bcursor-pointer bg-grey-100 hover:bg-gray-100 lg:bg-gray-100"
 								id="due"
 							>
 								<p class="px-1 font-semibold uppercase">
@@ -354,9 +383,9 @@
 			<div class="container mt-10 lg:flex xl:flex-row"></div>
 
 			<div class="container mt-10">
-				<h4 class="text-3xl uppercase">
-					<span class="text-teal-400">A chi </span> si rivolge
-					<span class="text-teal-400">l’osteopatia?</span>
+				<h4 class="text-3xl uppercase text-secondary">
+					<span class="text-primary">A chi </span> si rivolge
+					<span class="text-primary">l’osteopatia?</span>
 				</h4>
 				<p class="py-4">
 					L'osteopatia è una terapia che non presenta
@@ -368,10 +397,10 @@
 
 				<div class="flex flex-wrap">
 					<div
-						class="flex flex-col my-4 shadow md:w-2/2 sm:flex-row xl:w-2/4"
+						class="flex flex-col my-4 shadow md:w-2/2 sm:flex-row xl:w-2/4 sm:h-128 md:h-84 lg:h-72 lg:h-84"
 					>
 						<div
-							class="h-56 bg-top bg-no-repeat bg-cover shadow sm:h-auto sm:w-1/2 md:h-full lg-auto lg:w-1/2"
+							class="h-56 bg-top bg-no-repeat bg-cover shadow sm:h-auto sm:w-1/2 md:h-full lg-auto lg:w-1/2 md:bg-right sm:bg-left-30 md:bg-top"
 							style="
 								background-image: url(img/atleta.jpg);
 							"
@@ -401,10 +430,10 @@
 					</div>
 
 					<div
-						class="flex flex-col my-4 shadow md:w-2/2 sm:flex-row-reverse xl:flex-row xl:w-2/4"
+						class="flex flex-col my-4 shadow md:w-2/2 sm:flex-row-reverse xl:flex-row xl:w-2/4 sm:h-128 md:h-84 lg:h-72 lg:h-84"
 					>
 						<div
-							class="h-56 bg-top bg-no-repeat bg-cover shadow md:h-auto sm:w-1/2 sm:h-full lg-auto lg:w-1/2"
+							class="h-56 bg-top bg-no-repeat bg-cover shadow md:h-auto sm:w-1/2 sm:h-full lg-auto lg:w-1/2 sm:bg-left-20 md:bg-left lg:bg-top"
 							style="
 								background-image: url(img/anziani.jpg);
 							"
@@ -426,7 +455,7 @@
 					</div>
 
 					<div
-						class="flex flex-col my-4 shadow sm:w-2/2 sm:flex-row xl:w-2/4"
+						class="flex flex-col my-4 shadow sm:w-2/2 sm:flex-row xl:w-2/4 sm:h-128 md:h-84 lg:h-72 lg:h-84"
 					>
 						<div
 							class="h-56 bg-top bg-no-repeat bg-cover shadow md:h-auto sm:w-1/2 sm:h-full lg-auto lg:w-1/2"
@@ -456,7 +485,7 @@
 					</div>
 
 					<div
-						class="flex flex-col my-4 shadow md:w-2/2 sm:flex-row-reverse xl:flex-row xl:w-2/4"
+						class="flex flex-col my-4 shadow md:w-2/2 sm:flex-row-reverse xl:flex-row xl:w-2/4 sm:h-128 md:h-84 lg:h-72 lg:h-84"
 					>
 						<div
 							class="h-56 bg-top bg-no-repeat bg-cover shadow sm:h-auto sm:w-1/2 lg:w-1/2"
@@ -491,17 +520,17 @@
 			<div class="flex flex-col flex-wrap mt-20 md:flex-row xl:hidden">
 				<div class="md:w-1/2 lg:w-1/3">
 					<form
-						class="w-screen px-8 pt-6 pb-8 mb-0 bg-teal-400 shadow-md md:w-full"
+						class="w-screen px-8 pt-6 pb-8 mb-0 shadow-md bg-primary md:w-full"
 					>
 						<div class="mb-4">
 							<label
-								class="block mb-2 text-sm font-bold text-gray-700"
+								class="block mb-2 text-sm font-bold text-gray-300"
 								for="username"
 							>
 								Nome
 							</label>
 							<input
-								class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+								class="w-full px-3 py-2 leading-tight text-gray-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
 								id="nome"
 								type="text"
 								placeholder="Nome"
@@ -510,13 +539,13 @@
 
 						<div class="mb-4">
 							<label
-								class="block mb-2 text-sm font-bold text-gray-700"
+								class="block mb-2 text-sm font-bold text-gray-300"
 								for="username"
 							>
 								Email
 							</label>
 							<input
-								class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+								class="w-full px-3 py-2 leading-tight text-gray-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
 								id="username"
 								type="email"
 								placeholder="email"
@@ -525,13 +554,13 @@
 
 						<div class="mb-4">
 							<label
-								class="block mb-2 text-sm font-bold text-gray-700"
+								class="block mb-2 text-sm font-bold text-gray-300"
 								for="password"
 							>
 								Password
 							</label>
 							<input
-								class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+								class="w-full px-3 py-2 leading-tight text-gray-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
 								id="username"
 								type="password"
 								placeholder="password email"
@@ -540,13 +569,13 @@
 
 						<div class="mb-4">
 							<label
-								class="block mb-2 text-sm font-bold text-gray-700"
+								class="block mb-2 text-sm font-bold text-gray-300"
 								for="password"
 							>
-								messaggio
+								Messaggio
 							</label>
 							<textarea
-								class="w-full h-48 px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+								class="w-full h-48 px-3 py-2 leading-tight text-gray-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
 								rows="4"
 								cols="50"
 								name="messaggio"
@@ -556,25 +585,25 @@
 
 						<div class="">
 							<button
-								class="w-full px-4 py-2 font-bold text-teal-400 bg-white border-white rounded hover:bg-teal-700 focus:outline-none focus:shadow-outline"
+								class="w-full px-4 py-2 font-bold bg-white border-white rounded text-primary hover:bg-gray-200 focus:outline-none focus:shadow-outline"
 								type="button"
 							>
 								Invia messaggio
 							</button>
 						</div>
-						<div class="flex items-center mt-3 text-white">
+						<!-- 						<div class="flex items-center mt-3 text-white">
 							<a
 								href="mailto:t.rivellini@hotmail.it"
-								class="w-full px-4 py-2 font-bold text-center text-white bg-orange-400 border-white rounded hover:bg-orange-700 hover:text-gray-200 focus:outline-none focus:shadow-outline"
+								class="w-full px-4 py-2 font-bold text-center text-white bg-orange-400 border-white rounded focus:outline-none focus:shadow-outline"
 								type="button"
 							>
 								Inviaci un'email senza condividere i
 								tuoi dati
 							</a>
-						</div>
+						</div> -->
 						<div class="flex items-center mt-3">
+							<!-- href="tel:333 5993060" -->
 							<a
-								href="tel:333 5993060"
 								class="w-full px-4 py-2 font-bold text-center text-white bg-green-400 border-white rounded hover:bg-green-600 hover:text-gray-200 focus:outline-none focus:shadow-outline"
 								type="button"
 							>
@@ -599,13 +628,13 @@
 			<!-- </div> -->
 
 			<div class="container hidden xl:block xl:mt-24">
-				<h2 class="text-4xl text-teal-400 uppercase">Contattaci</h2>
+				<h2 class="text-4xl uppercase text-primary">Contattaci</h2>
 				<div
 					class="flex flex-col flex-wrap justify-between mt-4 md:flex-row"
 				>
 					<div class="md:w-1/2 lg:w-2/6">
 						<form
-							class="w-screen px-8 pt-6 pb-8 mb-0 bg-teal-400 rounded shadow-md md:w-full"
+							class="w-screen px-8 pt-6 pb-8 mb-0 rounded shadow-md bg-primary md:w-full"
 						>
 							<div class="mb-4">
 								<label
@@ -615,7 +644,7 @@
 									Nome
 								</label>
 								<input
-									class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+									class="w-full px-3 py-2 leading-tight border rounded shadow appearance-none text-secondary focus:outline-none focus:shadow-outline"
 									id="nome"
 									type="text"
 									placeholder="Nome"
@@ -630,7 +659,7 @@
 									Email
 								</label>
 								<input
-									class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+									class="w-full px-3 py-2 leading-tight border rounded shadow appearance-none text-secondary focus:outline-none focus:shadow-outline"
 									id="username"
 									type="email"
 									placeholder="email"
@@ -670,7 +699,7 @@
 
 							<div class="">
 								<button
-									class="w-full px-4 py-2 font-bold text-teal-400 bg-white border-white rounded hover:bg-teal-700 focus:outline-none focus:shadow-outline"
+									class="w-full px-4 py-2 font-bold bg-white border-white rounded text-primary hover:bg-teal-700 focus:outline-none focus:shadow-outline"
 									type="button"
 								>
 									Invia messaggio

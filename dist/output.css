@@ -19046,6 +19046,52 @@ video {
   transition-delay: 1000ms;
 }
 
+.bg-primary {
+  --bg-opacity: 1;
+  background-color: #2b6cb0;
+  background-color: rgba(43, 108, 176, var(--bg-opacity));
+}
+
+.bg-secondary {
+  --bg-opacity: 1;
+  background-color: #4fd1c5;
+  background-color: rgba(79, 209, 197, var(--bg-opacity));
+}
+
+.text-primary {
+  --text-opacity: 1;
+  color: #2b6cb0;
+  color: rgba(43, 108, 176, var(--text-opacity));
+}
+
+.text-secondary {
+  --text-opacity: 1;
+  color: #4fd1c5;
+  color: rgba(79, 209, 197, var(--text-opacity));
+}
+
+.bg-left-20 {
+  background-position: center;
+  background-position: 20% 100%;
+}
+
+.bg-left-30 {
+  background-position: center;
+  background-position: 30% 100%;
+}
+
+.h-72 {
+  height: 18rem;
+}
+
+.h-84 {
+  height: 21rem;
+}
+
+.h-128 {
+  height: 31rem;
+}
+
 @media (min-width: 500px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
@@ -37464,6 +37510,52 @@ video {
 
   .sm\:delay-1000 {
     transition-delay: 1000ms;
+  }
+
+  .sm\:bg-primary {
+    --bg-opacity: 1;
+    background-color: #2b6cb0;
+    background-color: rgba(43, 108, 176, var(--bg-opacity));
+  }
+
+  .sm\:bg-secondary {
+    --bg-opacity: 1;
+    background-color: #4fd1c5;
+    background-color: rgba(79, 209, 197, var(--bg-opacity));
+  }
+
+  .sm\:text-primary {
+    --text-opacity: 1;
+    color: #2b6cb0;
+    color: rgba(43, 108, 176, var(--text-opacity));
+  }
+
+  .sm\:text-secondary {
+    --text-opacity: 1;
+    color: #4fd1c5;
+    color: rgba(79, 209, 197, var(--text-opacity));
+  }
+
+  .sm\:bg-left-20 {
+    background-position: center;
+    background-position: 20% 100%;
+  }
+
+  .sm\:bg-left-30 {
+    background-position: center;
+    background-position: 30% 100%;
+  }
+
+  .sm\:h-72 {
+    height: 18rem;
+  }
+
+  .sm\:h-84 {
+    height: 21rem;
+  }
+
+  .sm\:h-128 {
+    height: 31rem;
   }
 }
 
@@ -55886,6 +55978,52 @@ video {
   .md\:delay-1000 {
     transition-delay: 1000ms;
   }
+
+  .md\:bg-primary {
+    --bg-opacity: 1;
+    background-color: #2b6cb0;
+    background-color: rgba(43, 108, 176, var(--bg-opacity));
+  }
+
+  .md\:bg-secondary {
+    --bg-opacity: 1;
+    background-color: #4fd1c5;
+    background-color: rgba(79, 209, 197, var(--bg-opacity));
+  }
+
+  .md\:text-primary {
+    --text-opacity: 1;
+    color: #2b6cb0;
+    color: rgba(43, 108, 176, var(--text-opacity));
+  }
+
+  .md\:text-secondary {
+    --text-opacity: 1;
+    color: #4fd1c5;
+    color: rgba(79, 209, 197, var(--text-opacity));
+  }
+
+  .md\:bg-left-20 {
+    background-position: center;
+    background-position: 20% 100%;
+  }
+
+  .md\:bg-left-30 {
+    background-position: center;
+    background-position: 30% 100%;
+  }
+
+  .md\:h-72 {
+    height: 18rem;
+  }
+
+  .md\:h-84 {
+    height: 21rem;
+  }
+
+  .md\:h-128 {
+    height: 31rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -74307,6 +74445,52 @@ video {
   .lg\:delay-1000 {
     transition-delay: 1000ms;
   }
+
+  .lg\:bg-primary {
+    --bg-opacity: 1;
+    background-color: #2b6cb0;
+    background-color: rgba(43, 108, 176, var(--bg-opacity));
+  }
+
+  .lg\:bg-secondary {
+    --bg-opacity: 1;
+    background-color: #4fd1c5;
+    background-color: rgba(79, 209, 197, var(--bg-opacity));
+  }
+
+  .lg\:text-primary {
+    --text-opacity: 1;
+    color: #2b6cb0;
+    color: rgba(43, 108, 176, var(--text-opacity));
+  }
+
+  .lg\:text-secondary {
+    --text-opacity: 1;
+    color: #4fd1c5;
+    color: rgba(79, 209, 197, var(--text-opacity));
+  }
+
+  .lg\:bg-left-20 {
+    background-position: center;
+    background-position: 20% 100%;
+  }
+
+  .lg\:bg-left-30 {
+    background-position: center;
+    background-position: 30% 100%;
+  }
+
+  .lg\:h-72 {
+    height: 18rem;
+  }
+
+  .lg\:h-84 {
+    height: 21rem;
+  }
+
+  .lg\:h-128 {
+    height: 31rem;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -92727,5 +92911,51 @@ video {
 
   .xl\:delay-1000 {
     transition-delay: 1000ms;
+  }
+
+  .xl\:bg-primary {
+    --bg-opacity: 1;
+    background-color: #2b6cb0;
+    background-color: rgba(43, 108, 176, var(--bg-opacity));
+  }
+
+  .xl\:bg-secondary {
+    --bg-opacity: 1;
+    background-color: #4fd1c5;
+    background-color: rgba(79, 209, 197, var(--bg-opacity));
+  }
+
+  .xl\:text-primary {
+    --text-opacity: 1;
+    color: #2b6cb0;
+    color: rgba(43, 108, 176, var(--text-opacity));
+  }
+
+  .xl\:text-secondary {
+    --text-opacity: 1;
+    color: #4fd1c5;
+    color: rgba(79, 209, 197, var(--text-opacity));
+  }
+
+  .xl\:bg-left-20 {
+    background-position: center;
+    background-position: 20% 100%;
+  }
+
+  .xl\:bg-left-30 {
+    background-position: center;
+    background-position: 30% 100%;
+  }
+
+  .xl\:h-72 {
+    height: 18rem;
+  }
+
+  .xl\:h-84 {
+    height: 21rem;
+  }
+
+  .xl\:h-128 {
+    height: 31rem;
   }
 }

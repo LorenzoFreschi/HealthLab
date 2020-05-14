@@ -3,3 +3,40 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@responsive {
+	.bg-primary {
+		@apply bg-blue-700;
+	}
+	.bg-secondary {
+		@apply bg-teal-400;
+	}
+
+	.text-primary {
+		@apply text-blue-700;
+	}
+	.text-secondary {
+		@apply text-teal-400;
+	}
+
+	.bg-left-20 {
+		@apply bg-center;
+		background-position: 20% 100%;
+	}
+
+	.bg-left-30 {
+		@apply bg-center;
+		background-position: 30% 100%;
+	}
+
+	.h-72 {
+		height: 18rem;
+	}
+
+	.h-84 {
+		height: 21rem;
+	}
+	.h-128 {
+		height: 31rem;
+	}
+}
