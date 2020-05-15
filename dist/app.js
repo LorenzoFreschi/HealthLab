@@ -20,54 +20,73 @@ document.getElementById("menu").addEventListener("click", function(){
     navbarOpen = !navbarOpen;
 }) */
 
+var btn = document.getElementById('body');
+
+btn.disabled = !(location.hash || location.href.slice(-1) == '#');
+btn.onclick = removeHash;
+
+window.onhashchange = function () {
+	btn.disabled = !(location.hash || location.href.slice(-1) == '#');
+};
+
+function removeHash() {
+	window.history.pushState('', document.title, window.location.pathname);
+	btn.disabled = !(location.hash || location.href.slice(-1) == '#');
+}
+
+history.replaceState({}, null, '/index.html');
+location.hash = '';
+history.replaceState(null, null, ' ');
+window.location.href.split('#')[0];
+
 //toggle descrizioni principi di still
 
 unoOpen = false;
 dueOpen = false;
 treOpen = false;
 
-uno = document.getElementById("uno");
-due = document.getElementById("due");
-tre = document.getElementById("tre");
+uno = document.getElementById('uno');
+due = document.getElementById('due');
+tre = document.getElementById('tre');
 
-contentUno = document.getElementById("cnt-uno");
-contentDue = document.getElementById("cnt-due");
-contentTre = document.getElementById("cnt-tre");
-uno.addEventListener("click", function () {
-  console.log("test uno");
-  console.log(unoOpen);
+contentUno = document.getElementById('cnt-uno');
+contentDue = document.getElementById('cnt-due');
+contentTre = document.getElementById('cnt-tre');
+uno.addEventListener('click', function () {
+	console.log('test uno');
+	console.log(unoOpen);
 
-  if (!unoOpen) {
-    contentUno.classList.remove("hidden");
-  } else {
-    contentUno.classList.add("hidden");
-  }
+	if (!unoOpen) {
+		contentUno.classList.remove('hidden');
+	} else {
+		contentUno.classList.add('hidden');
+	}
 
-  unoOpen = !unoOpen;
+	unoOpen = !unoOpen;
 });
 
-due.addEventListener("click", function () {
-  /*     console.log("test due");
+due.addEventListener('click', function () {
+	/*     console.log("test due");
     console.log(dueOpen); */
 
-  if (!dueOpen) {
-    contentDue.classList.remove("hidden");
-  } else {
-    contentDue.classList.add("hidden");
-  }
+	if (!dueOpen) {
+		contentDue.classList.remove('hidden');
+	} else {
+		contentDue.classList.add('hidden');
+	}
 
-  dueOpen = !dueOpen;
+	dueOpen = !dueOpen;
 });
 
-tre.addEventListener("click", function () {
-  /*     console.log("test tre");
+tre.addEventListener('click', function () {
+	/*     console.log("test tre");
     console.log(treOpen); */
 
-  if (!treOpen) {
-    contentTre.classList.remove("hidden");
-  } else {
-    contentTre.classList.add("hidden");
-  }
+	if (!treOpen) {
+		contentTre.classList.remove('hidden');
+	} else {
+		contentTre.classList.add('hidden');
+	}
 
-  treOpen = !treOpen;
+	treOpen = !treOpen;
 });
