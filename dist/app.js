@@ -1,43 +1,9 @@
-//toggle nav menu
-/* let deviceWidth = window.innerWidth;
-
-let navbarOpen = false;
-toggleMenu = document.getElementById("toggle-menu");
-munuList = document.getElementById("menu-list");
-
-document.getElementById("menu").addEventListener("click", function(){
-    
-    console.log("clicked!" );
-
-    if(navbarOpen){
-        // toggleMenu.classList.add("h-0");
-        munuList.classList.add("hidden");
-    }
-    else{
-        // toggleMenu.classList.remove("h-0");
-        munuList.classList.remove("hidden");
-    }
-    navbarOpen = !navbarOpen;
-}) */
-
-var btn = document.getElementById('body');
-
-btn.disabled = !(location.hash || location.href.slice(-1) == '#');
-btn.onclick = removeHash;
-
-window.onhashchange = function () {
-	btn.disabled = !(location.hash || location.href.slice(-1) == '#');
-};
-
-function removeHash() {
-	window.history.pushState('', document.title, window.location.pathname);
-	btn.disabled = !(location.hash || location.href.slice(-1) == '#');
-}
-
-history.replaceState({}, null, '/index.html');
-location.hash = '';
-history.replaceState(null, null, ' ');
-window.location.href.split('#')[0];
+document.addEventListener('DOMContentLoaded', function () {
+	console.log('prova');
+	setTimeout(function () {
+		document.getElementById('spinner-box').remove();
+	}, 1500);
+});
 
 //toggle descrizioni principi di still
 

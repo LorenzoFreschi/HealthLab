@@ -40,3 +40,9 @@
 		height: 31rem;
 	}
 }
+
+@screen xl {
+	.lg-container {
+		@apply container;
+	}
+}
