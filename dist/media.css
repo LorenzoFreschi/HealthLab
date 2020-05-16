@@ -1,1 +1,36 @@
+.custom-container {
+	padding: 0rem;
+	margin: 0rem;
+}
 
+@media screen and (min-width: 1024px) {
+	.custom-container {
+		max-width: 1024px;
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 3rem;
+		padding-left: 3rem;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.custom-container {
+		max-width: 1280px;
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 3rem;
+		padding-left: 3rem;
+	}
+}
+
+.h-350-bottom {
+}
+@media only screen and (max-height: 500px) {
+	.h-350-bottom {
+		margin-bottom: 0rem;
+		padding: 2rem;
+		background-color: transparent;
+	}
+}

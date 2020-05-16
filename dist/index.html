@@ -12,12 +12,13 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
 		/>
 		<link rel="stylesheet" href="spinner.css" />
-		<link rel="stylesheet" href="media.css" />
+
 		<link rel="stylesheet" href="output.css" />
 		<link rel="stylesheet" href="extras.css" />
+		<link rel="stylesheet" href="media.css" />
 		<!-- <link rel="stylesheet" href="media.css" /> -->
 	</head>
-	<body>
+	<body class="overflow-y-hidden" id="body">
 		<div class="absolute z-30 w-full h-full bg-white" id="spinner-box">
 			<div class="spinner"></div>
 		</div>
@@ -83,7 +84,7 @@
 							>
 						</li>
 						<li
-							class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue- md:hover:bg-transparent"
+							class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
 						>
 							<a
 								href="#chi"
@@ -116,7 +117,7 @@
 				class="relative flex flex-col items-center justify-center h-full py-0 py-4 text-center"
 			>
 				<div
-					class="absolute bottom-0 z-0 flex-col w-full p-10 mb-0 opacity-75 sm:p-12 sm:rounded md:bg-primary md:mb-12 lg:mb-40 md:w-auto lg:p-20 xl:p-24"
+					class="absolute bottom-0 z-0 flex-col w-full p-10 mb-20 opacity-75 sm:p-20 sm:rounded md:bg-primary sm:mb-40 md:w-auto md:p-24 h-350-bottom"
 				>
 					<h1
 						style="font-family: 'Slabo 27px', serif;"
@@ -132,10 +133,10 @@
 					<p class="text-xl font-semibold text-white">
 						Il tuo studio osteopatico di fiducia
 					</p>
-					<div class="z-10 flex flex-col sm:flex-row">
+					<div class="z-10 mt-8">
 						<a
 							href="#"
-							class="block w-full h-full px-4 py-3 m-1 bg-orange-400 border-blue-600 rounded-md sm:m-2 text-primary"
+							class="w-full h-full px-1 py-3 m-1 bg-orange-400 border-blue-600 rounded-md sm:px-4 sm:m-2 text-primary"
 						>
 							<!-- <i class="fas fa-chevron-right"></i>Info -->
 							CHI SAMO
@@ -143,7 +144,7 @@
 
 						<a
 							href="#contatti"
-							class="block w-full h-full px-4 py-3 m-1 border-2 border-teal-400 border-blue-600 rounded-md sm:m-2 text-secondary bg-primary"
+							class="w-full h-full px-1 py-3 m-1 border-2 border-teal-400 border-blue-600 rounded-md sm:px-4 sm:m-2 text-secondary bg-primary"
 						>
 							<!-- <i class="fas fa-chevron-right"></i>Info -->
 							CONTATTACI
@@ -204,6 +205,64 @@
 						adipisci nemo culpa numquam consequuntur explicabo
 						vel ab.
 					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="container mt-20" id="chi-siamo">
+			<h2 class="mb-10 text-4xl uppercase xl:text-4xl text-primary">
+				<span class="text-orange-400">chi</span> siamo
+			</h2>
+
+			<div class="slider">
+				<div
+					class="bg-center bg-no-repeat bg-cover slide current"
+					style="background: url('img/persone.jpg');"
+				>
+					<div class="content">
+						<h1>Slide One</h1>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur
+							adipisicing elit. Sit hic maxime,
+							voluptatibus labore doloremque vero!
+						</p>
+					</div>
+				</div>
+				<div
+					class="bg-top bg-no-repeat bg-cover slide"
+					style="background: url('img/lettino.jpg');"
+				>
+					<div class="content">
+						<h1>Slide Two</h1>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur
+							adipisicing elit. Sit hic maxime,
+							voluptatibus labore doloremque vero!
+						</p>
+					</div>
+				</div>
+				<!-- 				<div
+					class="bg-top bg-no-repeat bg-cover slide"
+					style="
+						background: url('https://source.unsplash.com/TMOeGZw9NY4/1600x900');
+					"
+				>
+					<div class="content">
+						<h1>Slide Three</h1>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur
+							adipisicing elit. Sit hic maxime,
+							voluptatibus labore doloremque vero!
+						</p>
+					</div>
+				</div> -->
+				<div class="buttons">
+					<button id="prev">
+						<i class="fas fa-arrow-left"></i>
+					</button>
+					<button id="next">
+						<i class="fas fa-arrow-right"></i>
+					</button>
 				</div>
 			</div>
 		</section>
@@ -532,112 +591,114 @@
 			</div>
 		</section>
 
-		<section id="contatti">
-			<div class="container">
+		<section id="contatti" class="mt-20">
+			<div class="custom-container">
 				<h4
-					class="mt-20 mb-10 text-3xl text-orange-400 uppercase xl:text-4xl"
+					class="hidden mt-20 mb-10 text-3xl text-orange-400 uppercase lg:block xl:text-4xl"
 				>
 					CONTATTACI
 				</h4>
+				<div class="bg-primary md:bg-transparent">
+					<div class="container">
+						<h4
+							class="py-10 mt-20 text-3xl text-orange-400 uppercase lg:hidden lg:block xl:text-4xl"
+						>
+							CONTATTACI
+						</h4>
+					</div>
+				</div>
+
 				<div
 					class="flex flex-col flex-wrap justify-between rounded md:flex-row"
 				>
 					<div class="md:w-2/6 xl:w-2/6">
 						<form
-							class="w-full px-8 py-16 mb-0 rounded shadow-md md:rounded-tr-none md:rounded-br-none sm:p-24 sm:py-20 md:px-8 md:py-8 bg-primary md:w-full xl:rounded xl:px-12"
+							class="w-full mb-0 shadow-md xl:rounded md:rounded-tr-none md:rounded-br-none bg-primary md:w-full lg:rounded-tl lg:rounded-bl"
 						>
-							<div class="mb-4">
-								<label
-									class="block mb-2 text-sm font-bold text-gray-300"
-									for="username"
-								>
-									Nome
-								</label>
-								<input
-									class="w-full px-3 py-2 leading-tight text-gray-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-									id="nome"
-									type="text"
-									placeholder="Nome"
-								/>
-							</div>
+							<div class="container pb-16 md:py-16">
+								<div class="mb-4">
+									<label
+										class="block mb-2 text-sm font-bold text-gray-300"
+										for="username"
+									>
+										Nome
+									</label>
+									<input
+										class="w-full px-3 py-3 leading-tight text-gray-500 border rounded shadow appearance-none md:py-2 focus:outline-none focus:shadow-outline"
+										id="nome"
+										type="text"
+										placeholder="Nome"
+									/>
+								</div>
 
-							<div class="mb-4">
-								<label
-									class="block mb-2 text-sm font-bold text-gray-300"
-									for="username"
-								>
-									Email
-								</label>
-								<input
-									class="w-full px-3 py-2 leading-tight text-gray-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-									id="username"
-									type="email"
-									placeholder="email"
-								/>
-							</div>
+								<div class="mb-4">
+									<label
+										class="block mb-2 text-sm font-bold text-gray-300"
+										for="username"
+									>
+										Email
+									</label>
+									<input
+										class="w-full px-3 py-3 leading-tight text-gray-500 border rounded shadow appearance-none md:py-2 focus:outline-none focus:shadow-outline"
+										id="username"
+										type="email"
+										placeholder="email"
+									/>
+								</div>
 
-							<div class="mb-4">
-								<label
-									class="block mb-2 text-sm font-bold text-gray-300"
-									for="password"
-								>
-									Password
-								</label>
-								<input
-									class="w-full px-3 py-2 leading-tight text-gray-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-									id="username"
-									type="password"
-									placeholder="password email"
-								/>
-							</div>
+								<div class="mb-4">
+									<label
+										class="block mb-2 text-sm font-bold text-gray-300"
+										for="password"
+									>
+										Password
+									</label>
+									<input
+										class="w-full px-3 py-3 leading-tight text-gray-500 border rounded shadow appearance-none md:py-2 focus:outline-none focus:shadow-outline"
+										id="username"
+										type="password"
+										placeholder="password email"
+									/>
+								</div>
 
-							<div class="mb-4">
-								<label
-									class="block mb-2 text-sm font-bold text-gray-300"
-									for="password"
-								>
-									Messaggio
-								</label>
-								<textarea
-									class="w-full h-48 px-3 py-2 leading-tight text-gray-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-									rows="4"
-									cols="50"
-									name="messaggio"
-								>
-								</textarea>
-							</div>
+								<div class="mb-4">
+									<label
+										class="block mb-2 text-sm font-bold text-gray-300"
+										for="password"
+									>
+										Messaggio
+									</label>
+									<textarea
+										class="w-full px-3 py-3 leading-tight text-gray-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+										rows="5"
+										cols="30"
+										name="messaggio"
+									>
+									</textarea>
+								</div>
 
-							<div class="">
-								<button
-									class="w-full px-4 py-2 font-bold bg-white border-white rounded text-primary hover:bg-gray-200 focus:outline-none focus:shadow-outline"
-									type="button"
-								>
-									Invia messaggio
-								</button>
-							</div>
-							<!-- 						<div class="flex items-center mt-3 text-white">
-											<a
-												href="mailto:t.rivellini@hotmail.it"
-												class="w-full px-4 py-2 font-bold text-center text-white bg-orange-400 border-white rounded focus:outline-none focus:shadow-outline"
-												type="button"
-											>
-												Inviaci un'email senza condividere i
-												tuoi dati
-											</a>
-										</div> -->
-							<div class="flex items-center mt-3">
-								<!-- href="tel:333 5993060" -->
-								<a
-									class="w-full px-4 py-2 font-bold text-center text-white bg-green-400 border-white rounded hover:bg-green-600 hover:text-gray-200 focus:outline-none focus:shadow-outline"
-									type="button"
-								>
-									Chiamaci!
-								</a>
+								<div class="">
+									<button
+										class="w-full px-4 py-3 font-bold bg-white border-white rounded text-primary hover:bg-gray-200 focus:outline-none focus:shadow-outline"
+										type="button"
+									>
+										Invia messaggio
+									</button>
+								</div>
+								<div class="flex items-center mt-3">
+									<!-- href="tel:333 5993060" -->
+									<a
+										class="w-full px-4 py-2 font-bold text-center text-white bg-green-400 border-white rounded hover:bg-green-600 hover:text-gray-200 focus:outline-none focus:shadow-outline"
+										type="button"
+									>
+										Chiamaci!
+									</a>
+								</div>
 							</div>
 						</form>
 					</div>
 					<div
-						class="h-48 mt-8 mb-4 md:w-4/6 lg:w-2/3 xl:w-3/6 md:h-auto bg-blue lg:shadow-xl md:mt-0 md:rounded"
+						class="h-48 sm:mb-0 md:w-4/6 lg:w-2/3 xl:w-3/6 md:h-auto bg-blue lg:shadow-xl md:mt-0 md:rounded"
 					>
 						<iframe
 							class="w-full h-full rounded xl:w-full md:rounded-tr md:rounded-br xl:rounded xl:border-2"
@@ -649,126 +710,6 @@
 					</div>
 				</div>
 			</div>
-
-			<!-- </div> -->
-
-			<!-- 			<div class="container hidden xl:block xl:mt-24">
-				<h2 class="text-4xl uppercase text-primary">Contattaci</h2>
-				<div
-					class="flex flex-col flex-wrap justify-between mt-4 md:flex-row"
-				>
-					<div class="md:w-1/2 lg:w-2/6">
-						<form
-							class="w-screen px-8 pt-6 pb-8 mb-0 rounded shadow-md bg-primary md:w-full"
-						>
-							<div class="mb-4">
-								<label
-									class="block mb-2 text-sm font-bold text-gray-700"
-									for="username"
-								>
-									Nome
-								</label>
-								<input
-									class="w-full px-3 py-2 leading-tight border rounded shadow appearance-none text-secondary focus:outline-none focus:shadow-outline"
-									id="nome"
-									type="text"
-									placeholder="Nome"
-								/>
-							</div>
-
-							<div class="mb-4">
-								<label
-									class="block mb-2 text-sm font-bold text-gray-700"
-									for="username"
-								>
-									Email
-								</label>
-								<input
-									class="w-full px-3 py-2 leading-tight border rounded shadow appearance-none text-secondary focus:outline-none focus:shadow-outline"
-									id="username"
-									type="email"
-									placeholder="email"
-								/>
-							</div>
-
-							<div class="mb-4">
-								<label
-									class="block mb-2 text-sm font-bold text-gray-700"
-									for="password"
-								>
-									Password
-								</label>
-								<input
-									class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-									id="username"
-									type="password"
-									placeholder="password email"
-								/>
-							</div>
-
-							<div class="mb-4">
-								<label
-									class="block mb-2 text-sm font-bold text-gray-700"
-									for=""
-								>
-									messaggio
-								</label>
-								<textarea
-									class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-									rows="3"
-									cols="20"
-									name="messaggio"
-								>
-								</textarea>
-							</div>
-
-							<div class="">
-								<button
-									class="w-full px-4 py-2 font-bold bg-white border-white rounded text-primary hover:bg-teal-700 focus:outline-none focus:shadow-outline"
-									type="button"
-								>
-									Invia messaggio
-								</button>
-							</div>
-							<div
-								class="flex items-center mt-3 text-white"
-							>
-								<a
-									href="mailto:t.rivellini@hotmail.it"
-									class="w-full px-4 py-2 font-bold text-center text-white bg-orange-400 border-white rounded hover:bg-orange-400 hover:text-gray-200 focus:outline-none focus:shadow-outline"
-									type="button"
-								>
-									Inviaci un'email senza condividere
-									i tuoi dati
-								</a>
-							</div>
-							<div class="flex items-center mt-3">
-								<a
-									href="tel:333 5993060"
-									class="w-full px-4 py-2 font-bold text-center text-white bg-green-400 border-white rounded hover:bg-green-600 hover:text-gray-200 focus:outline-none focus:shadow-outline"
-									type="button"
-								>
-									Chiamaci!
-								</a>
-							</div>
-						</form>
-					</div>
-					<div
-						class="w-full mx-4 border-2 rounded md:w-1/2 lg:w-3/6 md:h-auto bg-blue"
-						style="
-							background-image: url(img/gravidanza-2.jpg);
-						"
-					>
-						<iframe
-							class="w-full h-full"
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2831.259269175503!2d10.339859115535175!3d44.79590457909859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47806ad761e02783%3A0xfe95a0199c53b2cd!2sVia%20Pierluigi%20da%20Palestrina%2C%207a%2C%2043123%20Parma%20PR!5e0!3m2!1sit!2sit!4v1589120337186!5m2!1sit!2sit"
-							allowfullscreen=""
-							aria-hidden="false"
-							tabindex="0"
-						></iframe>
-					</div>
-				</div>
-			</div> -->
 
 			<footer class="p-4 mt-4">
 				<p class="text-xs text-center text-gray-500">
