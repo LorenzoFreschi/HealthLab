@@ -87,7 +87,7 @@
 							class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
 						>
 							<a
-								href="#chi"
+								href="#chi-siamo"
 								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-teal-400"
 								>Chi Siamo</a
 							>
@@ -135,7 +135,7 @@
 					</p>
 					<div class="z-10 mt-8">
 						<a
-							href="#"
+							href="#chi-siamo"
 							class="w-full h-full px-1 py-3 m-1 bg-orange-400 border-blue-600 rounded-md sm:px-4 sm:m-2 text-primary"
 						>
 							<!-- <i class="fas fa-chevron-right"></i>Info -->
@@ -216,7 +216,7 @@
 
 			<div class="slider">
 				<div
-					class="bg-center bg-no-repeat bg-cover slide current"
+					class="bg-center bg-no-repeat bg-cover slide current bg-left-30"
 					style="background: url('img/persone.jpg');"
 				>
 					<div class="content">
@@ -229,8 +229,8 @@
 					</div>
 				</div>
 				<div
-					class="bg-top bg-no-repeat bg-cover slide"
-					style="background: url('img/lettino.jpg');"
+					class="bg-center bg-no-repeat bg-cover slide bg-left-30"
+					style="background: url('img/lettino-1.jpg');"
 				>
 					<div class="content">
 						<h1>Slide Two</h1>
@@ -256,11 +256,19 @@
 						</p>
 					</div>
 				</div> -->
-				<div class="buttons">
-					<button id="prev">
+				<div
+					class="p-4 text-white bg-transparent cursor-pointer buttons"
+				>
+					<button
+						id="prev"
+						class="absolute px-5 py-4 border-2 border-white rounded-full outline-none focus:outline-none hover:bg-white hover:text-black"
+					>
 						<i class="fas fa-arrow-left"></i>
 					</button>
-					<button id="next">
+					<button
+						id="next"
+						class="absolute px-5 py-4 border-2 border-white rounded-full outline-none focus:outline-none hover:bg-white hover:text-black"
+					>
 						<i class="fas fa-arrow-right"></i>
 					</button>
 				</div>
@@ -471,9 +479,9 @@
 					paziente:
 				</p>
 
-				<div class="flex flex-wrap">
+				<div class="grid grid-cols-1 xl:grid-cols-2 xl:gap-6">
 					<div
-						class="flex flex-col my-4 shadow md:w-2/2 sm:flex-row xl:w-2/4 sm:h-128 md:h-84 lg:h-72 lg:h-84"
+						class="flex flex-col w-full my-4 shadow sm:flex-row sm:h-128 md:h-84 lg:h-72 lg:h-84"
 					>
 						<div
 							class="h-56 bg-top bg-no-repeat bg-cover shadow sm:h-auto sm:w-1/2 md:h-full lg-auto lg:w-1/2 md:bg-right sm:bg-left-30 md:bg-top"
@@ -506,7 +514,7 @@
 					</div>
 
 					<div
-						class="flex flex-col my-4 shadow md:w-2/2 sm:flex-row-reverse xl:flex-row xl:w-2/4 sm:h-128 md:h-84 lg:h-72 lg:h-84"
+						class="flex flex-col my-4 shadow sm:flex-row-reverse xl:flex-row sm:h-128 md:h-84 lg:h-72 lg:h-84"
 					>
 						<div
 							class="h-56 bg-top bg-no-repeat bg-cover shadow md:h-auto sm:w-1/2 sm:h-full lg-auto lg:w-1/2 sm:bg-left-20 md:bg-left lg:bg-top"
@@ -531,7 +539,7 @@
 					</div>
 
 					<div
-						class="flex flex-col my-4 shadow sm:w-2/2 sm:flex-row xl:w-2/4 sm:h-128 md:h-84 lg:h-72 lg:h-84"
+						class="flex flex-col my-4 shadow sm:flex-row sm:h-128 md:h-84 lg:h-72 lg:h-84"
 					>
 						<div
 							class="h-56 bg-top bg-no-repeat bg-cover shadow md:h-auto sm:w-1/2 sm:h-full lg-auto lg:w-1/2"
@@ -561,7 +569,7 @@
 					</div>
 
 					<div
-						class="flex flex-col my-4 shadow md:w-2/2 sm:flex-row-reverse xl:flex-row xl:w-2/4 sm:h-128 md:h-84 lg:h-72 lg:h-84"
+						class="flex flex-col my-4 shadow sm:flex-row-reverse xl:flex-row sm:h-128 md:h-84 lg:h-72 lg:h-84"
 					>
 						<div
 							class="h-56 bg-top bg-no-repeat bg-cover shadow sm:h-auto sm:w-1/2 lg:w-1/2"
@@ -609,9 +617,9 @@
 				</div>
 
 				<div
-					class="flex flex-col flex-wrap justify-between rounded md:flex-row"
+					class="grid justify-between grid-cols-6 grid-rows-1 rounded xl:gap-8"
 				>
-					<div class="md:w-2/6 xl:w-2/6">
+					<div class="col-span-6 md:col-span-3 xl:col-span-2">
 						<form
 							class="w-full mb-0 shadow-md xl:rounded md:rounded-tr-none md:rounded-br-none bg-primary md:w-full lg:rounded-tl lg:rounded-bl"
 						>
@@ -698,7 +706,7 @@
 						</form>
 					</div>
 					<div
-						class="h-48 sm:mb-0 md:w-4/6 lg:w-2/3 xl:w-3/6 md:h-auto bg-blue lg:shadow-xl md:mt-0 md:rounded"
+						class="h-48 col-span-6 md:col-span-3 xl:col-span-4 sm:mb-0 md:h-auto bg-blue lg:shadow-xl md:mt-0 md:rounded"
 					>
 						<iframe
 							class="w-full h-full rounded xl:w-full md:rounded-tr md:rounded-br xl:rounded xl:border-2"
