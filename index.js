@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const logger = require('./Middleware/logger');
+const logger = require('./middleware/logger');
 const redirectIf404 = require('./Middleware/redirect');
 const dotenv = require('dotenv');
 
