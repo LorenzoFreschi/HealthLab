@@ -4,12 +4,22 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"start": "node index",
+		"dev": "nodemon index",
 		"build:css": "tailwind build src/style.css -o dist/output.css"
 	},
-	"keywords": [],
-	"author": "",
+	"author": "Lorenzo Freschi",
 	"license": "ISC",
 	"dependencies": {
-		"tailwindcss": "^1.4.6"
+		"axios": "^0.19.2",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"moment": "^2.26.0",
+		"nodemailer": "^6.4.6",
+		"tailwindcss": "^1.4.6",
+		"uuid": "^3.3.2"
+	},
+	"devDependencies": {
+		"nodemon": "^1.18.9"
 	}
 }

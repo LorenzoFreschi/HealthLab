@@ -7,17 +7,26 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>HealthLab | Studio di Osteopatia a Parma</title>
+
+		<script src="https://www.google.com/recaptcha/api.js?render=6LdJufoUAAAAAAAWTpNWzLeh-HSSIqr6IZgCIhHk"></script>
+
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="spinner.css" />
 
-		<link rel="stylesheet" href="output.css" />
-		<link rel="stylesheet" href="extras.css" />
-		<link rel="stylesheet" href="media.css" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/spinner.css" />
+
+		<link rel="stylesheet" href="./css/output.css" />
+		<link rel="stylesheet" href="./css/extras.css" />
+		<link rel="stylesheet" href="./css/media.css" />
 		<!-- <link rel="stylesheet" href="media.css" /> -->
 	</head>
+
 	<body class="overflow-y-hidden" id="body">
 		<div class="absolute z-30 w-full h-full bg-white" id="spinner-box">
 			<div class="spinner"></div>
@@ -106,6 +115,7 @@
 						>
 							<a
 								href="#contatti"
+								id="cnt-btn"
 								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-teal-400"
 								>Contattaci</a
 							>
@@ -637,85 +647,107 @@
 					<div class="col-span-6 md:col-span-3 xl:col-span-2">
 						<form
 							class="w-full mb-0 shadow-md xl:rounded md:rounded-tr-none md:rounded-br-none bg-primary md:w-full lg:rounded-tl lg:rounded-bl"
+							id="email-form"
 						>
 							<div class="container pb-16 md:py-16">
 								<div class="mb-4">
 									<label
 										class="block mb-2 text-sm font-bold text-gray-300"
-										for="username"
+										for="nome"
 									>
 										Nome
 									</label>
 									<input
 										class="w-full px-3 py-3 leading-tight text-gray-500 border rounded shadow appearance-none md:py-2 focus:outline-none focus:shadow-outline"
 										id="nome"
+										name="nome"
 										type="text"
 										placeholder="Nome"
+										required
 									/>
 								</div>
 
 								<div class="mb-4">
 									<label
 										class="block mb-2 text-sm font-bold text-gray-300"
-										for="username"
+										for="cognome"
+									>
+										Cognome
+									</label>
+									<input
+										class="w-full px-3 py-3 leading-tight text-gray-500 border rounded shadow appearance-none md:py-2 focus:outline-none focus:shadow-outline"
+										id="cognome"
+										name="cognome"
+										type="text"
+										placeholder="Cognome"
+										required
+									/>
+								</div>
+
+								<div class="mb-4">
+									<label
+										class="block mb-2 text-sm font-bold text-gray-300"
+										for="email"
 									>
 										Email
 									</label>
 									<input
 										class="w-full px-3 py-3 leading-tight text-gray-500 border rounded shadow appearance-none md:py-2 focus:outline-none focus:shadow-outline"
-										id="username"
+										id="email"
+										name="email"
 										type="email"
-										placeholder="email"
+										placeholder="Email"
+										required
 									/>
 								</div>
 
 								<div class="mb-4">
 									<label
 										class="block mb-2 text-sm font-bold text-gray-300"
-										for="password"
+										for="email"
 									>
-										Password
+										Telefono
 									</label>
 									<input
 										class="w-full px-3 py-3 leading-tight text-gray-500 border rounded shadow appearance-none md:py-2 focus:outline-none focus:shadow-outline"
-										id="username"
-										type="password"
-										placeholder="password email"
+										id="tel"
+										name="tel"
+										type="number"
+										placeholder="Telefono"
 									/>
 								</div>
 
 								<div class="mb-4">
 									<label
 										class="block mb-2 text-sm font-bold text-gray-300"
-										for="password"
+										for="messaggio"
 									>
 										Messaggio
 									</label>
+
 									<textarea
 										class="w-full px-3 py-3 leading-tight text-gray-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-										rows="5"
-										cols="30"
+										id="messaggio"
 										name="messaggio"
-									>
-									</textarea>
+										rows="5"
+										cols="50"
+										required
+									></textarea>
 								</div>
 
 								<div class="">
+									<input
+										class="w-full px-4 py-3 font-bold text-center bg-white border-white rounded cursor-pointer text-primary hover:bg-gray-200 focus:outline-none focus:shadow-outline"
+										id="email-btn"
+										type="submit"
+									/>
+
 									<button
-										class="w-full px-4 py-3 font-bold bg-white border-white rounded text-primary hover:bg-gray-200 focus:outline-none focus:shadow-outline"
-										type="button"
-									>
-										Invia messaggio
-									</button>
-								</div>
-								<div class="flex items-center mt-3">
-									<!-- href="tel:333 5993060" -->
-									<a
-										class="w-full px-4 py-2 font-bold text-center text-white bg-green-400 border-white rounded hover:bg-green-600 hover:text-gray-200 focus:outline-none focus:shadow-outline"
-										type="button"
-									>
-										Chiamaci!
-									</a>
+										data-sitekey="6LdJufoUAAAAAAAWTpNWzLeh-HSSIqr6IZgCIhHk"
+										data-callback="onSubmit"
+										data-action="submit"
+										class="hidden g-recaptcha"
+									></button>
 								</div>
 							</div>
 						</form>
@@ -748,6 +780,9 @@
 			</footer>
 		</section>
 
-		<script src="app.js"></script>
+		<!-- modal  -->
+
+		<script src="js/app.js"></script>
+		<script src="js/requests.js"></script>
 	</body>
 </html>

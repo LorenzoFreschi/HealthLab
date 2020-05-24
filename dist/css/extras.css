@@ -14,7 +14,7 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
 html {
-	scroll-behavior: smooth;
+	/* scroll-behavior: smooth; */
 }
 
 /* mobile navbar animation */
