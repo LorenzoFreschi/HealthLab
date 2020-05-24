@@ -9,8 +9,6 @@ function sendEmail(e) {
 	const tel = document.getElementById('tel').value;
 	const messaggio = document.getElementById('messaggio').value;
 
-	l;
-
 	/* 	console.log(nome);
 	console.log(cognome);
 	console.log(email);
