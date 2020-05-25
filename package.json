@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "node index",
 		"dev": "nodemon index",
-		"build:css": "tailwind build src/style.css -o dist/output.css"
+		"build:css": "tailwind build src/style.css -o dist/css/output.css"
 	},
 	"author": "Lorenzo Freschi",
 	"license": "ISC",

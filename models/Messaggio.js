@@ -16,7 +16,8 @@ class Messaggio {
 		this.testo = `
 
 				<div>
-					
+					<br />
+					<br />
 					<table style="font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;">
 						<tr>
 							<th style="border: 1px solid #ddd;padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #81e6d9;color: white;">Nome</th>

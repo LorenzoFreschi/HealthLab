@@ -21,10 +21,9 @@ class Email {
 	send() {
 		return new Promise((resolve, reject) => {
 			let transporter = nodemailer.createTransport({
-				service: 'gmail',
 				host: `${this.host}`,
-				port: 25,
-				secure: false, // true for 465, false for other ports
+				port: 465,
+				secure: true, // true for 465, false for other ports
 				auth: {
 					user: this.mittente, // generated ethereal user
 					pass: this.psw, // generated ethereal password
