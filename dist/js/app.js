@@ -1,12 +1,32 @@
 document.addEventListener('DOMContentLoaded', function () {
 	setTimeout(function () {
 		document.getElementById('spinner-box').remove();
-		document.getElementById('body').classList.remove('overflow-y-hidden');
-	}, 1500);
+		document
+			.getElementsByTagName('body')[0]
+			.classList.remove('overflow-y-hidden');
+	}, 700);
 });
 
-//toggle descrizioni principi di still
+//navbar animation
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+	unCheck();
+	var currentScrollPos = window.pageYOffset;
+	if (prevScrollpos > currentScrollPos) {
+		document.getElementById('navbar').style.top = '0';
+	} else {
+		document.getElementById('navbar').style.top = '-70px';
+	}
+	prevScrollpos = currentScrollPos;
+};
 
+window.addEventListener('resize', unCheck);
+
+function unCheck() {
+	document.getElementById('toggle-btn').checked = false;
+}
+
+//toggle descrizioni principi di still
 unoOpen = false;
 dueOpen = false;
 treOpen = false;
@@ -60,7 +80,7 @@ tre.addEventListener('click', function () {
 const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
-const auto = false; // Auto scroll
+const auto = true; // Auto scroll
 const intervalTime = 5000;
 let slideInterval;
 

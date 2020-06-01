@@ -6,7 +6,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
-		<title>HealthLab | Studio di Osteopatia a Parma</title>
+		<title>HealthLab | Centro Osteopatico a Parma</title>
 
 		<script src="https://www.google.com/recaptcha/api.js?render=6LdJufoUAAAAAAAWTpNWzLeh-HSSIqr6IZgCIhHk"></script>
 
@@ -20,195 +20,180 @@
 			rel="stylesheet"
 		/>
 
-		<link rel="shortcut icon" href="/dist/favicon.ico" />
+		<link rel="stylesheet" href="../node_modules/aos/dist/aos.css" />
+		<link rel="shortcut icon" href="favicon.ico" />
 		<link rel="stylesheet" href="./css/spinner.css" />
 
 		<link rel="stylesheet" href="./css/output.css" />
 		<link rel="stylesheet" href="./css/extras.css" />
+		<link rel="stylesheet" href="./css/modals.css" />
 		<link rel="stylesheet" href="./css/media.css" />
-		<!-- <link rel="stylesheet" href="media.css" /> -->
 	</head>
 
-	<body class="overflow-y-hidden" id="body">
-		<div class="absolute z-30 w-full h-full bg-white" id="spinner-box">
+	<body class="overflow-y-hidden">
+		<div
+			class="fixed top-0 left-0 z-30 w-full h-full bg-white"
+			id="spinner-box"
+		>
 			<div class="spinner"></div>
 		</div>
-		<header
-			id="home"
-			class="relative h-screen bg-center bg-no-repeat bg-cover"
-			style="background-image: url(img/cover-2.jpg);"
+
+		<nav
+			id="navbar"
+			class="fixed top-0 z-20 w-screen text-white bg-primary md:flex md:justify-between xl:px-8 text-secondary"
+			style="position: fixed; top: 0;"
 		>
-			<nav
-				id="navbar"
-				class="fixed z-20 w-screen text-white bg-primary md:flex md:justify-between xl:px-8 text-secondary"
-			>
-				<div
-					class="z-30 flex flex-row items-center justify-between px-6 py-4 sm:flex-row"
-				>
-					<a href="#home">
-						<!-- 				<h1
-							style="font-family: 'Slabo 27px', serif;"
-							class="z-30 font-semibold text-white"
-						>
-						 <i  class="fas fa-bone"></i>
-							Health
-							<span class="text-secondary">Lab</span>
-						</h1> -->
-
-						<img
-							src="img/hl-nav.png"
-							alt=""
-							class="mx-auto"
-							style="width: 120px; height: auto;"
-						/>
-					</a>
-
-					<label
-						for="toggle-btn"
-						class="mr-3 md:hidden"
-						id="menu"
-					>
-						<i class="text-2xl fas fa-bars"></i>
-					</label>
-					<label
-						for="toggle-btn"
-						class="hidden md:hidden"
-						id="menu"
-					>
-						<i class="text-2xl fas fa-times"></i>
-					</label>
-				</div>
-				<input
-					type="checkbox"
-					name=""
-					id="toggle-btn"
-					class="hidden"
-				/>
-				<nav
-					id="toggle-menu"
-					class="z-20 h-0 my-auto overflow-hidden md:h-auto"
-				>
-					<ul
-						id="menu-list"
-						class="mb-3 text-white md:flex md:items-center md:mb-0 md:px-2 md:mr-4 lg:mr-0"
-					>
-						<li
-							class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
-						>
-							<a
-								href="#home"
-								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-2 sm:px-1 md:hover:border-teal-300"
-								>Home</a
-							>
-						</li>
-						<li
-							class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
-						>
-							<a
-								href="#chi-siamo"
-								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-teal-300"
-								>Chi Siamo</a
-							>
-						</li>
-						<li
-							class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
-						>
-							<a
-								href="#osteopatia"
-								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-teal-300"
-								>Osteopatia</a
-							>
-						</li>
-						<li
-							class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
-						>
-							<a
-								href="#contatti"
-								id="cnt-btn"
-								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-teal-300"
-								>Contattaci</a
-							>
-						</li>
-						<li
-							class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
-							title="Follow us!"
-						>
-							<a
-								target="_blank"
-								href="https://www.instagram.com/healthlab_osteopatia/"
-								class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-teal-400"
-							>
-								<i
-									class="z-30 text-xl sm:text-base fab fa-instagram tooltip"
-								>
-								</i>
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</nav>
 			<div
-				class="relative flex flex-col items-center justify-center h-full py-0 py-4 text-center"
+				class="z-30 flex flex-row items-center justify-between px-6 py-4 sm:flex-row"
 			>
-				<div
-					class="absolute bottom-0 z-0 flex-col w-full p-10 mb-20 opacity-75 sm:p-20 sm:rounded md:bg-primary sm:mb-40 md:w-auto md:p-24 h-350-bottom"
+				<a href="#home">
+					<img
+						src="img/hl-nav.png"
+						alt=""
+						class="mx-auto"
+						style="width: 120px; height: auto;"
+					/>
+				</a>
+
+				<label
+					for="toggle-btn"
+					class="md:hidden"
+					id="menu"
+					style="height: 36px;"
 				>
-					<!-- 			<h1
-						style="font-family: 'Slabo 27px', serif;"
-						class="z-10 mb-0 text-4xl text-white"
-						id="titolo"
+					<span class="text-4xl material-icons">
+						menu
+					</span>
+				</label>
+			</div>
+			<input type="checkbox" name="" id="toggle-btn" class="hidden" />
+			<nav
+				id="toggle-menu"
+				class="z-20 h-0 my-auto overflow-hidden md:h-auto"
+			>
+				<ul
+					id="menu-list"
+					class="mb-3 text-white md:flex md:items-center md:mb-0 md:px-2 md:mr-4 lg:mr-0"
+				>
+					<li
+						class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
 					>
-						Health<span class="text-secondary">Lab</span>
-					</h1> -->
-
-					<div class="flex-flex-col">
-						<img
-							src="img/hl-logo.png"
-							alt=""
-							class="mx-auto"
-							style="width: 200px; height: auto;"
-						/>
-						<img
-							src="img/hl-txt.png"
-							alt=""
-							class="mx-auto"
-							style="width: 200px; height: auto;"
-						/>
-					</div>
-
-					<!-- 	<p class="z-10 text-white uppercase">
-						centro osteopatico
-					</p> -->
-
-					<p class="text-lg font-semibold text-white">
-						Il tuo studio osteopatico di fiducia
-					</p>
-					<div class="z-10 mt-8">
+						<a
+							href="#home"
+							class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-2 sm:px-1 md:hover:border-teal-300"
+							>Home</a
+						>
+					</li>
+					<li
+						class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
+					>
 						<a
 							href="#chi-siamo"
-							class="w-full h-full px-1 py-3 m-1 bg-orange-400 border-2 border-orange-400 rounded-md sm:px-4 sm:m-2 text-primary"
+							class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-teal-300"
+							>Chi Siamo</a
 						>
-							<!-- <i class="fas fa-chevron-right"></i>Info -->
-							CHI SAMO
-						</a>
-
+					</li>
+					<li
+						class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
+					>
+						<a
+							href="#osteopatia"
+							class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-teal-300"
+							>Osteopatia</a
+						>
+					</li>
+					<li
+						class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
+					>
 						<a
 							href="#contatti"
-							class="w-full h-full px-1 py-3 m-1 border-2 border-teal-300 border-blue-600 rounded-md sm:px-4 sm:m-2 text-secondary bg-primary"
+							id="cnt-btn"
+							class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-teal-300"
+							>Contattaci</a
 						>
-							<!-- <i class="fas fa-chevron-right"></i>Info -->
-							CONTATTACI
+					</li>
+					<li
+						class="px-6 py-2 md:px-1 lg:py-4 hover:bg-blue-600 md:hover:bg-transparent"
+						title="Follow us!"
+					>
+						<a
+							target="_blank"
+							href="https://www.instagram.com/healthlab_osteopatia/"
+							class="px-1 py-2 text-sm font-light uppercase transition duration-700 ease-in-out border-b-2 border-transparent lg:text-xs xl:px-3 lg:px-4 md:px-3 sm:px-1 md:hover:border-teal-400"
+						>
+							<i
+								class="z-30 text-xl sm:text-base fab fa-instagram tooltip"
+							>
+							</i>
 						</a>
-					</div>
+					</li>
+				</ul>
+			</nav>
+		</nav>
+
+		<div
+			class="flex items-center justify-center h-full h-screen p-0 py-0 py-4 text-center bg-center bg-no-repeat bg-cover"
+			style="background-image: url(img/cover-2.jpg);"
+			id="home"
+		>
+			<div
+				id="showcase"
+				class="relative flex-col w-auto p-4 rounded sm:p-10 md:p-14 bg-primary landscape-p-0"
+				style="
+					background-color: rgba(43, 108, 176, 0.8);
+					top: 30px;
+				"
+			>
+				<div class="flex-flex-col">
+					<img
+						src="img/hl-logo.png"
+						alt=""
+						class="mx-auto"
+						style="width: 200px; height: auto;"
+					/>
+					<img
+						src="img/hl-txt.png"
+						alt=""
+						class="mx-auto landscape-hidden"
+						style="width: 200px; height: auto;"
+					/>
+				</div>
+
+				<p
+					class="hidden text-lg italic font-hairline text-white sm:block"
+				>
+					Il tuo centro osteopatico di fiducia
+				</p>
+				<div
+					class="flex flex-row p-4 pb-0 sm:pt-4 sm:pb-0 sm:px-10 landscape-p-0"
+				>
+					<a
+						href="#chi-siamo"
+						class="p-2 px-3 mx-1 bg-orange-400 border-2 border-orange-400 rounded-full sm:px-4 sm:m-2 text-primary"
+					>
+						CHI SAMO
+					</a>
+
+					<a
+						href="#contatti"
+						class="p-2 px-3 mx-1 border-2 border-teal-300 rounded-full sm:px-4 sm:m-2 text-secondary bg-primary"
+					>
+						CONTATTACI
+					</a>
 				</div>
 			</div>
-		</header>
+		</div>
 
 		<section class="container">
 			<div
-				class="flex flex-col items-center justify-center mt-5 xl:my-12 sm:flex-col md:flex-col lg:flex-row xl-flex-row"
+				class="flex flex-col items-stretch items-center justify-center mt-5 xl:my-12 sm:flex-col md:flex-col lg:flex-row xl-flex-row"
 			>
-				<div class="mt-4 text-center">
+				<div
+					class="flex-1 mt-4 text-center"
+					data-aos="fade-down"
+					data-aos-duration="1000"
+					data-aos-offset="-50"
+				>
 					<i
 						class="p-5 text-white rounded-full bg-primary fas fa-heart text-secondary"
 					></i>
@@ -218,13 +203,19 @@
 						Passione
 					</h4>
 					<p class="px-6 py-2 text-center">
-						Lorem ipsum dolor sit amet consectetur adipisicing
-						elit. Exercitationem nihil, incidunt commodi
-						adipisci nemo culpa numquam consequuntur explicabo
-						vel ab.
+						HealthLab è formata da giovani appassionati
+						sportivi. Crediamo che il movimento sia
+						l'espressione principale della salute e del
+						benessere di una persona.
 					</p>
 				</div>
-				<div class="mt-4 text-center">
+				<div
+					class="flex-1 mt-4 text-center"
+					data-aos="fade-down"
+					data-aos-duration="1000"
+					data-aos-delay="200"
+					data-aos-offset="-50"
+				>
 					<i
 						class="p-5 text-white rounded-full bg-primary fas fa-hand-holding-heart text-secondary"
 					></i>
@@ -234,13 +225,20 @@
 						Cura
 					</h4>
 					<p class="px-6 py-2 text-center">
-						Lorem ipsum dolor sit amet consectetur adipisicing
-						elit. Exercitationem nihil, incidunt commodi
-						adipisci nemo culpa numquam consequuntur explicabo
-						vel ab.
+						L'attenzione del paziente è l'aspetto più
+						importante del nostro lavoro di osteopati.<br />
+						Per questo l'espressione
+						<span class="italic">"cura del paziente"</span> è
+						il nostro mantra.
 					</p>
 				</div>
-				<div class="mt-4 text-center">
+				<div
+					class="flex-1 mt-4 text-center"
+					data-aos="fade-down"
+					data-aos-duration="1000"
+					data-aos-delay="400"
+					data-aos-offset="-50"
+				>
 					<i
 						class="p-5 text-white rounded-full bg-primary fas fa-spa text-secondary"
 					></i>
@@ -250,31 +248,57 @@
 						Benessere
 					</h4>
 					<p class="px-6 py-2 text-center">
-						Lorem ipsum dolor sit amet consectetur adipisicing
-						elit. Exercitationem nihil, incidunt commodi
-						adipisci nemo culpa numquam consequuntur explicabo
-						vel ab.
+						La nostra missione è migliorare lo stato di
+						benessere generale delle persone. Mal di schiena,
+						dolori lombari e cervicale sono sintomi molto
+						comuni che possono essere alleviati e guariti.
 					</p>
 				</div>
 			</div>
 		</section>
 
-		<section class="container mt-20" id="chi-siamo">
-			<h2 class="mb-10 text-4xl uppercase xl:text-4xl text-secondary">
+		<section class="container pt-10" id="chi-siamo">
+			<h2
+				class="mb-10 text-4xl uppercase xl:text-4xl text-secondary"
+				data-aos="fade-right"
+				data-aos-duration="1000"
+				data-aos-delay=""
+			>
 				<span class="text-primary">chi</span> siamo
 			</h2>
 
-			<div class="slider">
+			<div
+				class="slider"
+				data-aos="zoom-in"
+				data-aos-duration="1000"
+				data-aos-delay="300"
+			>
 				<div
-					class="bg-center bg-no-repeat bg-cover slide current bg-left-30"
+					class="bg-center bg-top bg-no-repeat bg-cover slide current"
 					style="background: url('img/persone.jpg');"
 				>
-					<div class="content">
-						<h1>Slide One</h1>
-						<p>
-							Lorem ipsum, dolor sit amet consectetur
-							adipisicing elit. Sit hic maxime,
-							voluptatibus labore doloremque vero!
+					<div class="z-10 p-8 sm:p-8 content">
+						<h1 class="text-base uppercase text-primary">
+							Il team
+						</h1>
+						<p class="text-sm">
+							Siamo un team di osteopati diplomati al
+							<a
+								href="https://www.scuolaosteopatia.it/"
+								target="_blank"
+								class="font-semibold text-teal-400"
+								>CIO
+							</a>
+							di Parma.
+							<br />
+							Ci chiamiamo
+							<span class="text-primary"
+								>Tommaso Rivellini</span
+							>
+							e
+							<span class="text-primary"
+								>Stefano Capra</span
+							>.
 						</p>
 					</div>
 				</div>
@@ -282,57 +306,72 @@
 					class="bg-center bg-no-repeat bg-cover slide bg-left-30"
 					style="background: url('img/lettino-1.jpg');"
 				>
-					<div class="content">
-						<h1>Slide Two</h1>
-						<p>
-							Lorem ipsum, dolor sit amet consectetur
-							adipisicing elit. Sit hic maxime,
-							voluptatibus labore doloremque vero!
+					<div class="z-10 p-8 content">
+						<h1 class="text-base uppercase text-primary">
+							Lo studio
+						</h1>
+						<p class="text-sm">
+							Il nostro studio è situato in Via Pierluigi
+							da Palestrina.
 						</p>
 					</div>
 				</div>
-				<!-- 				<div
-					class="bg-top bg-no-repeat bg-cover slide"
-					style="
-						background: url('https://source.unsplash.com/TMOeGZw9NY4/1600x900');
-					"
-				>
-					<div class="content">
-						<h1>Slide Three</h1>
-						<p>
-							Lorem ipsum, dolor sit amet consectetur
-							adipisicing elit. Sit hic maxime,
-							voluptatibus labore doloremque vero!
-						</p>
-					</div>
-				</div> -->
 				<div
-					class="p-4 text-white bg-transparent cursor-pointer buttons"
+					class="p-2 py-0 text-white bg-transparent cursor-pointer sm:p-4 buttons focus:outline-none"
+					style="padding-bottom: 0px; padding-top: 0px;"
 				>
 					<button
 						id="prev"
-						class="absolute px-5 py-4 border-2 border-white rounded-full outline-none focus:outline-none hover:bg-white hover:text-black"
+						class="absolute h-full m-2 outline-none sm:m-5 focus:outline-none"
 					>
-						<i class="fas fa-arrow-left"></i>
+						<!-- <i class="fas fa-arrow-left"></i> -->
+						<span
+							class="text-4xl text-gray-900 material-icons hover:opacity-50"
+						>
+							keyboard_arrow_left
+						</span>
 					</button>
 					<button
 						id="next"
-						class="absolute px-5 py-4 border-2 border-white rounded-full outline-none focus:outline-none hover:bg-white hover:text-black"
+						class="absolute h-full m-2 outline-none sm:m-5 focus:outline-none"
 					>
-						<i class="fas fa-arrow-right"></i>
+						<!-- <i class="fas fa-arrow-right"></i> -->
+						<span
+							class="text-4xl text-gray-900 material-icons hover:opacity-50"
+						>
+							keyboard_arrow_right
+						</span>
 					</button>
 				</div>
 			</div>
 		</section>
 
-		<section class="mt-12" id="osteopatia">
+		<section class="pt-12" id="osteopatia">
 			<div class="container">
-				<h4 class="text-3xl uppercase xl:text-4xl text-secondary">
-					<span class="text-primary">Che cos'è</span>
-					l'osteopatia?
+				<h4
+					class="pt-8 text-3xl uppercase xl:text-4xl text-secondary"
+				>
+					<span
+						class="text-primary"
+						data-aos="fade-right"
+						data-aos-duration="1000"
+						data-aos-delay=""
+						>Che cos'è</span
+					>
+					<span
+						data-aos="fade-right"
+						data-aos-duration="1000"
+						data-aos-delay="300"
+						>l'osteopatia?</span
+					>
 				</h4>
 				<div class="lg:flex lg:flex-row-reverse">
-					<div class="mt-2 lg:w-1/2 lg:ml-4">
+					<div
+						class="mt-2 lg:w-1/2 lg:ml-4"
+						data-aos="fade-down"
+						data-aos-duration="1500"
+						data-aos-delay="1000"
+					>
 						<p class="pt-2 text-justify lg:mr-4 lg:pt-3">
 							L'osteopatia é una
 							<span class="text-primary"
@@ -365,13 +404,15 @@
 
 					<div
 						class="flex flex-col mt-4 rounded-md shadow-lg sm:flex-row lg:justify-between lg:h-full lg-w-auto lg:w-1/2 lg:mr-4 lg:pt-3"
+						data-aos="fade-down"
+						data-aos-duration="1500"
+						data-aos-delay="1000"
 					>
 						<div
 							class="w-full bg-top bg-no-repeat bg-cover rounded-tl-md rounded-tr-md sm:rounded-tr-none sm:rounded-tl-md sm:rounded-bl-md md:w-2/3 md:h-auto lg:w-1/2 xl:block xl:w-1/2"
 							style="background-image: url(img/still.jpg);"
 							id="still"
 						></div>
-						<!-- <div  class="w-40 h-40 md:h-12 md:w-12 lg:h-16 lg:w-12 "></div> -->
 						<div
 							class="px-4 py-2 mt-4 mb-4 italic font-light lg:py-12 md:my-2 md:m-10 lg:m-4 xl:flex xl:flex-col lg:w-1/2 lg:content-center"
 						>
@@ -387,12 +428,13 @@
 				</div>
 			</div>
 
-			<div class="container"></div>
-
 			<div class="container">
 				<div class="mt-4">
 					<h5
-						class="mt-12 mb-3 text-2xl uppercase xl:text-3xl xl:font-normal"
+						class="mt-12 mb-3 text-xl uppercase xl:text-2xl xl:font-normal"
+						data-aos="fade-down"
+						data-aos-duration="1000"
+						data-aos-delay="600"
 					>
 						Still fondò l’osteopatia
 						<br class="" />
@@ -400,14 +442,17 @@
 						<span class="">tre principi fondamentali:</span>
 					</h5>
 					<ul
-						class="grid grid-cols-3 gap-1 lg:gap-4 xl:gap-8 lg:h-auto"
+						class="grid grid-cols-3 gap-1 lg:gap-4 xl:gap-6 lg:h-auto"
+						data-aos="zoom-in"
+						data-aos-duration="1000"
+						data-aos-delay="900"
 					>
 						<div
 							class="col-span-3 border p2 lg:flex lg:flex-col lg:col-span-1"
+							id="uno"
 						>
 							<li
 								class="px-3 py-4 cursor-pointer lg:bg-gray-100 hover:bg-gray-100 lg:border-none"
-								id="uno"
 							>
 								<p class="px-1 font-semibold uppercase">
 									l’unità biologica, dinamica ed
@@ -482,10 +527,10 @@
 
 						<div
 							class="col-span-3 border p2 lg:flex lg:flex-col lg:col-span-1"
+							id="tre"
 						>
 							<li
 								class="px-3 py-4 border-none cursor-pointer py-4cur hover:bg-gray-100 lg:bg-gray-100"
-								id="tre"
 							>
 								<p class="px-1 font-semibold uppercase">
 									il concetto di
@@ -518,24 +563,25 @@
 				</div>
 			</div>
 
-			<div class="container mt-10 lg:flex xl:flex-row"></div>
-
 			<div class="container mt-10">
 				<h4 class="text-3xl uppercase text-secondary">
 					<span class="text-primary">A chi </span> si rivolge
 					<span class="text-primary">l’osteopatia?</span>
 				</h4>
-				<p class="py-4">
+				<p class="py-4 xl:w-3/4">
 					L'osteopatia è una terapia che non presenta
 					controindicazioni ed è quindi indicata in pazienti di
-					tutte le età. Gli obiettivi che l'osteopata si prefigge
-					variano anche a seconda dell'età e delle necessità del
-					paziente:
+					tutte le età. <br />
+					Gli obiettivi che l'osteopata si prefigge variano anche
+					a seconda dell'età e delle necessità del paziente:
 				</p>
 
 				<div class="grid grid-cols-1 xl:grid-cols-2 xl:gap-6">
 					<div
 						class="flex flex-col w-full my-4 shadow sm:flex-row sm:h-128 md:h-84 lg:h-72 lg:h-84"
+						data-aos="fade-up"
+						data-aos-duration="500"
+						data-aos-offset="60"
 					>
 						<div
 							class="h-56 bg-top bg-no-repeat bg-cover shadow sm:h-auto sm:w-1/2 md:h-full lg-auto lg:w-1/2 md:bg-right sm:bg-left-30 md:bg-top"
@@ -569,6 +615,9 @@
 
 					<div
 						class="flex flex-col my-4 shadow sm:flex-row-reverse xl:flex-row sm:h-128 md:h-84 lg:h-72 lg:h-84"
+						data-aos="fade-up"
+						data-aos-duration="500"
+						data-aos-offset="60"
 					>
 						<div
 							class="h-56 bg-top bg-no-repeat bg-cover shadow md:h-auto sm:w-1/2 sm:h-full lg-auto lg:w-1/2 sm:bg-left-20 md:bg-left lg:bg-top"
@@ -594,6 +643,9 @@
 
 					<div
 						class="flex flex-col my-4 shadow sm:flex-row sm:h-128 md:h-84 lg:h-72 lg:h-84"
+						data-aos="fade-up"
+						data-aos-duration="500"
+						data-aos-offset="60"
 					>
 						<div
 							class="h-56 bg-top bg-no-repeat bg-cover shadow md:h-auto sm:w-1/2 sm:h-full lg-auto lg:w-1/2"
@@ -624,6 +676,9 @@
 
 					<div
 						class="flex flex-col my-4 shadow sm:flex-row-reverse xl:flex-row sm:h-128 md:h-84 lg:h-72 lg:h-84"
+						data-aos="fade-up"
+						data-aos-duration="500"
+						data-aos-offset="60"
 					>
 						<div
 							class="h-56 bg-top bg-no-repeat bg-cover shadow sm:h-auto sm:w-1/2 lg:w-1/2"
@@ -653,17 +708,20 @@
 			</div>
 		</section>
 
-		<section id="contatti" class="mt-20">
+		<section id="contatti">
 			<div class="custom-container">
 				<h4
 					class="hidden mt-20 mb-10 text-3xl text-orange-400 uppercase lg:block xl:text-4xl"
 				>
 					CONTATTACI
 				</h4>
-				<div class="bg-primary md:bg-transparent">
+				<div
+					class="relative bg-primary md:bg-transparent"
+					style="bottom: -5px;"
+				>
 					<div class="container">
 						<h4
-							class="py-10 mt-20 text-3xl text-orange-400 uppercase lg:hidden lg:block xl:text-4xl"
+							class="py-10 mt-20 text-3xl uppercase text-secondary md:text-orange-400 lg:hidden lg:block xl:text-4xl"
 						>
 							CONTATTACI
 						</h4>
@@ -765,11 +823,13 @@
 								</div>
 
 								<div class="">
-									<input
-										class="w-full px-4 py-3 font-bold text-center bg-white border-white rounded cursor-pointer text-primary hover:bg-gray-200 focus:outline-none focus:shadow-outline"
+									<button
+										class="w-full px-4 py-3 font-hairline font-bold text-center bg-white border-white rounded cursor-pointer text-primary hover:bg-gray-200 focus:outline-none focus:shadow-outline"
 										id="email-btn"
 										type="submit"
-									/>
+									>
+										INVIA
+									</button>
 
 									<button
 										data-sitekey="6LdJufoUAAAAAAAWTpNWzLeh-HSSIqr6IZgCIhHk"
@@ -794,24 +854,110 @@
 					</div>
 				</div>
 			</div>
-
-			<footer class="p-4 mt-4">
-				<p class="text-xs text-center text-gray-500">
-					&copy;HealthLab S.r.l - Via Giovanni Pierluigi da
-					Palestrina, 7/a - 43123 Parma (PR) | Website powered by
-					Lorenzo Freschi
-				</p>
-				<!-- 
-                    <p class="text-xs text-center text-gray-500">
-                        Email: t.rivellini@hotmail.com
-                        Email: stefanocapra29@.gmail.com
-                      </p> -->
-			</footer>
 		</section>
 
-		<!-- modal  -->
+		<footer class="p-4 px-6 mt-2">
+			<p class="text-xs text-center text-gray-500">
+				&copy;HealthLab S.r.l - Via Giovanni Pierluigi da
+				Palestrina, 7/a - 43123 Parma (PR) | Website powered by
+				Lorenzo Freschi
+			</p>
+		</footer>
+
+		<!-- modal -->
+
+		<!-- success -->
+		<div
+			class="fixed top-0 left-0 z-40 hidden w-full h-full overflow-auto"
+			style="background-color: rgba(0, 0, 0, 0.6);"
+			id="modal-success"
+		>
+			<div
+				id="success-box"
+				class="relative mt-16 md:mt-20 bg-white w-80% sm:w-70% md:w-50% lg:w-40% xl:w-30% m-auto rounded-lg"
+			>
+				<div
+					class="relative justify-center text-center bg-green-400 rounded-tl-lg rounded-tr-lg"
+				>
+					<p
+						class="absolute right-0 mx-3 my-1 text-xl font-bold text-gray-300 cursor-pointer hover:opacity-50"
+						id="ms-btn"
+					>
+						&times
+					</p>
+					<ion-icon
+						name="checkmark-circle-outline"
+						class="py-12 text-6xl text-white sm:text-7xl md:text-9xl"
+					>
+					</ion-icon>
+				</div>
+				<div
+					class="py-6 m-4 text-center sm:py-8 modal-content"
+					style="font-family: 'Varela Round', sans-serif;"
+				>
+					<h3 class="py-2 text-4xl">Grazie!</h3>
+					<p class="py-2 text-xl">
+						la tua richiesta è stata inoltrata, ti
+						contatteremo al più presto.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="fixed top-0 left-0 z-40 hidden w-full h-full overflow-auto"
+			style="background-color: rgba(0, 0, 0, 0.6);"
+			id="modal-failed"
+		>
+			<div
+				id="failed-box"
+				class="relative mt-16 md:mt-20 bg-white w-80% sm:w-70% md:w-50% lg:w-40% xl:w-30% m-auto rounded-lg"
+			>
+				<div
+					class="relative justify-center text-center bg-red-400 rounded-tl-lg rounded-tr-lg"
+				>
+					<p
+						class="absolute right-0 mx-3 my-1 text-xl font-bold text-gray-300 cursor-pointer hover:opacity-50"
+						id="mf-btn"
+					>
+						&times
+					</p>
+					<ion-icon
+						name="alert-circle-outline"
+						class="py-12 text-6xl text-white sm:text-7xl md:text-9xl"
+					></ion-icon>
+				</div>
+				<div
+					class="p-4 py-6 m-4 text-center modal-content sm:py-8 md:p-6"
+					style="font-family: 'Varela Round', sans-serif;"
+				>
+					<h3 class="py-2 text-3xl">
+						Impossibile inviare richiesta
+					</h3>
+					<p class="py-2 text-xl">
+						ci scusiamo ma non è stato possibile inviare il
+						messaggio.
+					</p>
+					<p class="py-2 text-xl">
+						ti invitiamo a riprovare. Se il problema persiste
+						<a
+							class="text-primary hover:opacity-75 hover:underline"
+							href="mailto:info@healthlab-osteopatia.it"
+							title="clicca per inviare email!"
+							>puoi inviarci un' email.</a
+						>
+					</p>
+				</div>
+			</div>
+		</div>
 
 		<script src="js/app.js"></script>
 		<script src="js/requests.js"></script>
+		<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+		<!--  <script src="../node_modules/aos/dist/aos.js"></script>-->
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
 	</body>
 </html>

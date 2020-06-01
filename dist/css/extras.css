@@ -1,6 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+/* 
 
 <style>
 
@@ -12,11 +10,19 @@ body {
 } 
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
 html {
 	scroll-behavior: smooth;
 }
 
+#home {
+	height: 100vh !important;
+}
 /* mobile navbar animation */
 #toggle-menu {
 	transition: height 0.4s;
@@ -34,7 +40,9 @@ html {
 	margin: 0;
 	padding: 0;
 }
-
+#navbar {
+	transition: top 0.3s;
+}
 .slider {
 	position: relative;
 	overflow: hidden;
@@ -64,10 +72,20 @@ html {
 	bottom: 0px;
 	left: -600px;
 	opacity: 0;
-	width: 30%;
+	width: 40%;
 	background-color: rgba(255, 255, 255, 0.8);
 	color: #333;
-	padding: 35px;
+	overflow: auto;
+	max-height: 190px !important;
+}
+
+@media only screen and (max-height: 550px) {
+	.slide .content p {
+		display: none;
+	}
+	.slide .content h1 {
+		margin-bottom: 0px !important;
+	}
 }
 
 .slide .content h1 {
@@ -81,13 +99,17 @@ html {
 }
 
 .buttons button#next {
-	top: 40%;
-	right: 15px;
+	margin: 0px !important;
+	top: 0%;
+	padding-right: 15px;
+	right: 0px;
 }
 
 .buttons button#prev {
-	top: 40%;
-	left: 15px;
+	margin: 0px !important;
+	top: 0%;
+	padding-left: 15px;
+	left: 0px;
 }
 
 @media (max-width: 800px) {

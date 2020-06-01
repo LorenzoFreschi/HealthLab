@@ -25,12 +25,34 @@
 	}
 }
 
-.h-350-bottom {
-}
-@media only screen and (max-height: 500px) {
-	.h-350-bottom {
-		margin-bottom: 0rem;
-		padding: 2rem;
-		background-color: transparent;
+@media only screen and (max-height: 550px) {
+	.landscape-hidden {
+		display: none;
 	}
+
+	.landscape-p-0 {
+		padding: 0rem;
+	}
+
+	#showcase {
+		background-color: rgba(43, 108, 176, 0) !important;
+	}
+}
+
+@media only screen and (max-height: 420px) {
+	#close-modal-btn {
+		display: none;
+	}
+	#modal-success .modal-content,
+	#modal-failed .modal-content {
+		font-size: 2.25rem;
+		padding: 1rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	/* 	#modal-success .success-box,
+	#modal-failed .failed-box {
+		margin-top: 5% !important;
+	} */
 }
