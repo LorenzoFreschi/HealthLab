@@ -1,3 +1,13 @@
+//nasconde il carattere '#' nella barra di navigazione
+window.addEventListener('hashchange', (e) => {
+	e.preventDefault();
+	const currentUrl = window.location.href;
+	const split = currentUrl.split('#');
+	const newUrl = split[0].replace('#', '');
+	window.history.pushState('string', 'Title', newUrl);
+});
+
+//rimuove spinner dal body
 document.addEventListener('DOMContentLoaded', function () {
 	setTimeout(function () {
 		document.getElementById('spinner-box').remove();
@@ -7,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}, 700);
 });
 
-//navbar animation
+//nasconde navbar onScrollDown la mostra onScrollUp
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
 	unCheck();
@@ -20,6 +30,7 @@ window.onscroll = function () {
 	prevScrollpos = currentScrollPos;
 };
 
+//chiude navbar se lo scermo viene resized
 window.addEventListener('resize', unCheck);
 
 function unCheck() {
@@ -81,7 +92,7 @@ const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
 const auto = true; // Auto scroll
-const intervalTime = 5000;
+const intervalTime = 10000;
 let slideInterval;
 
 const nextSlide = () => {
